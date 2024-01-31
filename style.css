@@ -1,0 +1,305 @@
+:root {
+    /* Existing color definitions */
+    --primary-color: #797e4c;
+    --background-color: #f5f5f5;
+    --text-color: #222222;
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+
+    /* Dark mode color definitions */
+    --dark-background-color: #121212;
+    --dark-text-color: #e0e0e0;
+    --dark-primary-color: #797e4c;
+}
+
+/* Basic Resets and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Stylish Navigation Bar */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition:0.2s;
+}
+
+header:hover{
+    background-color: #222222;
+    top:0;
+    transition: 0.2s;
+}
+
+.scrolled{
+    background-color: #222222;
+    transition: 0.2s;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    font-weight: 600;
+    transition: color 0.3s, border-bottom 0.3s; /* Add border-bottom transition */
+}
+
+nav a:hover {
+    color:#ccb34d;
+}
+
+/* Hero Section and Titles */
+section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+section h1, section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+}
+
+/* Modern Projects Section */
+#projects {
+    background-color: #222222;
+    color: var(--text-color);
+    position: relative;
+}
+
+#projects a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+#projects a:hover {
+    background-color:#ccb34d;
+    color: #534741;
+    transition:0.2s;
+
+}
+
+/* Skills Section with Cards */
+#skills {
+    flex-wrap: wrap;
+    gap: 3rem;
+    background-color: #222222;
+}
+#skills li{
+    color: #f5f5f5;
+    left:50%;
+    background-color: var(--skills-li-color); /* Choose a soft, complementary color */
+    padding: 0.5rem 1rem;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Adjust as needed */
+    margin: 0.5rem; /* Space between items */
+
+}
+
+#skills h2 {
+    text-align: center; /* Centers the text */
+    margin-bottom: 20px; /* Adds some space below the heading */
+}
+
+#about{
+        flex-wrap:nowrap;
+        color: #222222;
+        overflow: hidden;
+        height:500px;
+}
+#about h2{
+    margin-left:0%;
+}
+
+#about p{
+
+    text-align: left;
+    margin-right:0%;
+    margin-top:1em;
+    margin-left:3%;
+    padding-right:24em;
+}
+
+
+.skew-me{
+    height:100px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#222222), color-stop(0.49, #222222), color-stop(0.51, #f5f5f5), to(#f5f5f5));
+    -webkit-background-size: 49px 100%;
+}
+
+.skew-me2 {
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    background-color: transparent; /* Your element's background color */
+    height: 0px; /* Height of the element */
+  }
+  
+  .skew-me2:after {
+    content: '';
+    background-repeat: repeat-x;
+    height:100px;
+    width:100%;
+    position: absolute;
+    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#222222), color-stop(0.49, #222222), color-stop(0.51, transparent), to(transparent));
+    -webkit-background-size: 49px 100%;
+    transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .skew-me2.show-on-scroll:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.skew-me3{
+    height:20px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 40, from(#ccb34d), color-stop(0.49, #ccb34d), color-stop(0.51, #4d5738), to(#4d5738));
+    -webkit-background-size: 25px 100%;
+    position:relative;
+
+}
+/* Contact Section and Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.thumbnail{
+    width: 290px; /* Set your desired width */
+    height:100%; /* Set your desired height */
+    object-fit:cover;
+    left:70%;
+    position:absolute;
+    margin-top:-200px;
+    z-index: -1;
+}
+#contact{
+    background-color: #4d5738;
+    color:#d3d3d3;
+    padding-top: 15px;
+    height: 100px;
+}
+
+
+#contact h2 {
+    color:#d3d3d3;
+    top:0;
+    position:relative;
+    margin-bottom:5px;
+    text-align:center;
+}
+
+footer{
+    background-color: #ccb34d;
+    color: #404040
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: var(--dark-background-color);
+        --text-color: var(--dark-text-color);
+        --primary-color: var(--dark-primary-color);
+        /* More overrides as necessary */
+    }
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #skills {
+        flex-direction: column;
+    }
+
+    
+#about p{
+
+    text-align: left;
+    margin-left:3%;
+    padding-right:1em;
+    font-size: 14px;
+}
+.thumbnail{
+    width: 100%; /* Set your desired width */
+    height:100%; /* Set your desired height */
+    object-fit:cover;
+    left:0%;
+    position:absolute;
+    margin-top:10px;
+    z-index:-1;
+    opacity: 0.3;
+}
+#about h2{
+    margin-left:0%;
+    margin-top:-2em;
+}
+#about{
+    padding-bottom: 40em;
+
+}
+footer{
+    background-color: #ccb34d;
+    color: #404040;
+    font-size: smaller;
+    height:10px;
+}
+#contact{
+    font-size: smaller;
+    padding-top: 15px;
+    height: 10px;
+}
+#contact h2{
+    font-size:small;
+}
+.skew-me{
+    display: none;
+}
+
+}
