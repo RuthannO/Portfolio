@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Ruth-Ann O'Donnell's Frontend Web Developer Portfolio">
+    <title>Ruth-Ann O'Donnell</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+        <nav class="scrolled">
+        <img id="logo" src="./png/logo.svg">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -16,13 +21,13 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-            <div class="skew-me2"></div>
-
-    </header>
+    <section class="hero">
+        <img class="hero-img" src="./png/girl.svg">
+    </section>
     <!-- Projects Section -->
     <section id="projects">
         <h2>My Projects</h2>
-        <p>Check out my projects on GitHub:</p>
+        <p>You can inspect the source code for my projects on my Github profile:</p>
         <a href="https://github.com/ruthanno" target="_blank">Visit My GitHub Profile</a>
         <!-- You can list specific projects here if you want -->
     </section>
@@ -51,6 +56,12 @@
             <LI>CSS</LI>
             <!-- More skills -->
         </ul>
+    </section>
+    <section>
+        <h1>Projects</h1>
+        <div class="project-container">
+            
+        </div>
     </section>
     <!-- Contact Section -->
     <section id="contact">
