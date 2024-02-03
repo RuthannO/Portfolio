@@ -6,32 +6,40 @@
     <meta name="viewport" content="width=device-width, intial-scale=1.0, user-scalable=no">
     <meta name="description" content="Ruth-Ann O'Donnell's Frontend Web Developer Portfolio">
     <title>Ruth-Ann O'Donnell</title>
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <script src="vendors/easings.min.js"></script>
+    <script type="text/javascript" src="fullpage.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-        <nav class="scrolled">
+        <nav>
         <img id="logo" src="./png/logo.svg">
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <button id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+            <ul class="nav-links">
+                <li class="link"><a href="#about">About Me</a></li>
+                <li class="link"><a href="#projects">Projects</a></li>
+                <li class="link"><a href="#skills">Skills</a></li>
+                <li class="link"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     <section class="hero">
         <img class="hero-img" src="./png/girl.svg">
     </section>
     <!-- Projects Section -->
-    <section id="projects">
+    <section class="projects">
         <h2>My Projects</h2>
         <p>You can inspect the source code for my projects on my Github profile:</p>
         <a href="https://github.com/ruthanno" target="_blank">Visit My GitHub Profile</a>
         <!-- You can list specific projects here if you want -->
     </section>
-    <div class="skew-me"></div>
 <!--About me-->
 <section id="about">
     <h2>About</h2>

@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    setTimeout(() => {
-      document.getElementById('logo').classList.add('scrolled');
-    }, 5000);
-  });
-  
+window.addEventListener('load', function() {
+  var content = document.getElementsByClassName('.hero');
+  content.classList.add('content-visible'); // Apply the class to move the content into view
+});
